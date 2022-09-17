@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+/* import Card from '../components/Card.astro'; */
+/* import Pill from '../components/Pill.vue'; */
+export async function getStaticPaths() {
+  const pages = [
+    {
+      slug: undefined,
+      title: "Astro Store",
+      text: "Welcome to the Astro store!",
+    },
+    {
+      slug: "blog/intro",
+      title: "Astro products",
+      text: "We have lots of products for you",
+    },
+    {
+      slug: "blog/why-neovim",
+      title: "The ultimative Astro handbook",
+      text: "If you want to learn Astro, you must read this book.",
+    },
+  ];
+  return pages.map(({ slug, title, text }) => {
+    return {
+      params: { slug },
+      props: { title, text },
+    };
+  });
+}
+
+const { slug, title, text, pages } = Astro.props;
+---
+
+<Layout title="Blog List">
+		<title>Blog Page</title>
+	<main>
+		<div>test</div>
+		
+		<a href="{slug}" class="hover:bg-gray-400 hover:text-white rounded px-4 py-2">{ slug }</a>
+		<h1>{title}</h1>
+		<p>{text}</p>
+	</main>
+</Layout>

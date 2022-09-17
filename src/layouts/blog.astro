@@ -1,24 +1,27 @@
 ---
-export interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+const { frontmatter } = Astro.props;
+import NavBar from '../components/NavBar.vue';
 ---
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <!-- Add other Head elements here, like styles and meta tags. -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+	<NavBar />
+    <!-- Add other UI components here, like common headers and footers. -->
+    <h1>{frontmatter.title} by {frontmatter.author}</h1>
+    <!-- 2. Rendered HTML will be passed into the default slot. -->
+    <slot />
+    <p>Written on: {frontmatter.date}</p>
+  </body>
 </html>
+
 <style>
 	:root {
 		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
