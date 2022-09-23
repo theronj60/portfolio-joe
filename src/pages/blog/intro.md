@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/blog.astro
 title: "My Introduction"
+description: "My intro markdown page"
 author: "Theron Joe"
 date: "16 Aug 2022"
 ---

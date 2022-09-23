@@ -1,7 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-/* import Card from '../components/Card.astro'; */
-/* import Pill from '../components/Pill.vue'; */
+
+const posts = (await Astro.glob('./*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
+);
+
 export async function getStaticPaths() {
   const pages = [
     {
@@ -28,16 +31,28 @@ export async function getStaticPaths() {
   });
 }
 
-const { slug, title, text, pages } = Astro.props;
+const { slug, title, text } = Astro.props;
 ---
 
-<Layout title="Blog List">
-		<title>Blog Page</title>
-	<main>
-		<div>test</div>
-		
-		<a href="{slug}" class="hover:bg-gray-400 hover:text-white rounded px-4 py-2">{ slug }</a>
-		<h1>{title}</h1>
-		<p>{text}</p>
-	</main>
+<Layout title="blog-list">
+	<section class="mx-8 py-8">
+		<ul class="flex flex-col space-y-4">
+			{posts.map((post) => (
+				<li class="border border-black rounded py-2 px-4">
+					<a href={post.url}>{post.frontmatter.title} -</a>
+					<time datetime={post.frontmatter.date}>
+						{new Date(post.frontmatter.date).toLocaleDateString('en-us', {
+							year: 'numeric',
+							month: 'short',
+							day: 'numeric',
+						})}
+					</time>
+					<div>
+						{post.frontmatter.description}
+					</div>
+				</li>
+			))}
+		</ul>
+	</section>
 </Layout>
+
