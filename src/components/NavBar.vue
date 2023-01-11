@@ -18,7 +18,6 @@ onMounted(() => {
 })
 
  async function setNav() {
-	console.log(window.location.pathname)
 	navItems.value.forEach((nav) => {
 		if (window.location.pathname == nav.link) {
 			nav.active = true
@@ -26,12 +25,11 @@ onMounted(() => {
 			nav.active = false
 		}
 	})
-	console.log(navItems)
 }
 </script>
 
 <template id="nav-bar">
-	<nav class="flex justify-between min-w-full items-center px-6 py-4 border bg-gray-500">
+	<nav class="flex justify-between fixed min-w-full items-center px-6 py-4 bg-gray-800 text-gray-100 opacity-75">
 		<div id="logo" class="mx-4">
 			<div class="border rounded-lg">
 				<img id="" :src="Logo" alt="" class="w-12 h-12">

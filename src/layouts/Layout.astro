@@ -18,7 +18,11 @@ import NavBar from '../components/NavBar.vue';
 		<title>{title}</title>
 	</head>
 	<body>
-		<NavBar client:load />
-		<slot />
+		<header>
+			<NavBar client:load />
+		</header>
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>

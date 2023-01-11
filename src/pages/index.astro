@@ -2,70 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 /* import Card from '../components/Card.astro'; */
 /* import Pill from '../components/Pill.vue'; */
+import Image from '../imgs/monument-valley-night.jpg';
+const bgImg = `background-image: url(${Image}); background-size: cover;`
 ---
 
 <Layout title="Theron Joe">
-	<main>
-		index Page
-	</main>
+	<section class="min-h-screen min-w-screen flex justify-center text-gray-100 pt-24" style={bgImg}>
+		<div class="flex flex-col">
+			<div class="text-3xl">My name is </div>
+			<div class="ml-8">
+				<span class="text-4xl font-semibold">Theron Joe</span>
+			</div>
+			<div>
+				<button type="button" class="border rounded-md px-4 py-1">Learn More</button>
+			</div>
+		</div>
+	</section>
 </Layout>
 
-<style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
-
-	h1 {
-		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>

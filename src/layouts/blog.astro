@@ -1,24 +1,28 @@
 ---
 const { frontmatter } = Astro.props;
-import NavBar from '../components/NavBar.vue';
+import NavBar from "../components/NavBar.vue";
 ---
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Add other Head elements here, like styles and meta tags. -->
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<meta name="generator" content={Astro.generator} />
-    <title>{frontmatter.title}</title>
-  </head>
-  <body>
-	<NavBar />
-    <!-- Add other UI components here, like common headers and footers. -->
-    <h1>{frontmatter.title} by {frontmatter.author}</h1>
-    <!-- 2. Rendered HTML will be passed into the default slot. -->
-    <slot />
-    <p>Written on: {frontmatter.date}</p>
-  </body>
+	<head>
+		<!-- Add other Head elements here, like styles and meta tags. -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title}</title>
+	</head>
+	<body>
+		<header>
+			<NavBar client:load />
+		</header>
+		<main>
+			<!-- Add other UI components here, like common headers and footers. -->
+			<h1>{frontmatter.title} by {frontmatter.author}</h1>
+			<!-- 2. Rendered HTML will be passed into the default slot. -->
+			<slot />
+			<p>Written on: {frontmatter.date}</p>
+		</main>
+	</body>
 </html>
-

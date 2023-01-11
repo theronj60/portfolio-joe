@@ -2,10 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 /* import Card from '../components/Card.astro'; */
 /* import Pill from '../components/Pill.vue'; */
+import Image from '../imgs/narrows.jpeg';
+const bgImg = `background-image: url(${Image}); background-size: cover;`
 ---
 
 <Layout title="Theron Joe">
-	<main>
+	<section class="min-h-screen min-w-screen flex snap-center text-gray-100 pt-24" style={bgImg}>
 		About Page
-	</main>
+	</section>
 </Layout>
