@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Resume from '../components/Resume.vue'
+---
+
+<Layout title="Theron Joe">
+	<section class="flex">
+		<Resume client:load />
+	</section>
+</Layout>
