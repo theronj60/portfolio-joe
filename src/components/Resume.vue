@@ -7,8 +7,8 @@ const bgImg = `background-image: url(${Image}); background-size: cover;`
 </script>
 
 <template id="resume">
-	<section class="min-h-screen w-full flex justify-center pt-24 pb-4" :style=bgImg>
-		<div class="w-[900px] border rounded py-4 px-8 bg-gray-200">
+	<section class="min-h-screen w-full flex justify-center pt-24 pb-4 bg-center" :style=bgImg>
+		<div class="md:w-[900px] w-full border rounded py-4 px-8 mx-4 md:mx-0 bg-gray-200">
 			<div class="flex flex-col items-center w-full h-24">
 				<h2 class="flex text-3xl text-cyan-600 font-semibold">Theron Joe</h2>
 				<span class="font-semibold">Web Developer</span>
@@ -19,8 +19,8 @@ const bgImg = `background-image: url(${Image}); background-size: cover;`
 					<a href="https://joetwebdev.io/" target="_blank" class="hover:font-semibold hover:text-cyan-600">joetwebdev.io</a>
 				</div>
 			</div>
-			<div class="flex justify-center space-x-4 mt-4">
-				<div class="flex flex-col w-2/3 space-y-4 text-gray-900">
+			<div class="flex-col md:flex-row flex justify-center md:space-x-4 mt-4">
+				<div class="flex flex-col md:w-2/3 space-y-4 text-gray-900">
 					<h3 class="text-2xl text-cyan-600 font-semibold -mb-2">Revelant Experience</h3>
 					<div>
 						<h4 class="text-base text-gray-600"><span class="text-gray-900 font-semibold">Web Developer</span> at Holbrook Asphalt</h4>
@@ -61,7 +61,7 @@ const bgImg = `background-image: url(${Image}); background-size: cover;`
 						</ul>
 					</div>
 				</div>
-				<div class="flex flex-col space-y-2 w-1/3 text-gray-900 text-sm">
+				<div class="flex flex-col space-y-2 md:w-1/3 text-gray-900 text-sm">
 					<h3 class="text-2xl text-cyan-600 font-semibold -mb-2">Skills</h3>
 					<div>
 						<p class="font-semibold">Programing Languages</p>

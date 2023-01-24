@@ -11,6 +11,8 @@ let navItems =  ref([
 	{ name: 'Contact', link: '#contact', active: false },
 ])
 
+let mobileNav = false
+
 onMounted(() => {
 	nextTick(() => {
 		setNav()
@@ -29,13 +31,17 @@ onMounted(() => {
 </script>
 
 <template id="nav-bar">
-	<nav class="flex justify-between fixed min-w-full items-center px-6 py-4 bg-gray-800 text-gray-100 opacity-75">
+	<nav class="flex justify-between min-w-full items-center px-6 py-4 bg-gray-800 text-gray-100">
 		<div id="logo" class="mx-4">
 			<div class="border rounded-lg">
 				<img id="" :src="Logo" alt="" class="w-12 h-12">
 			</div>
+			
 		</div>
-		<div>
+		<div class="flex md:hidden">
+				X
+		</div>
+		<div class="md:flex hidden">
 			<ul class="md:flex justify-self-end items-center text-gray-100 hidden">
 				<li v-for="nav in navItems" :key="nav.name" :class="['mx-2 font-black', { 'border-b-4': nav.active }]">
 					<a :href="nav.link">
@@ -45,4 +51,13 @@ onMounted(() => {
 			</ul>
 		</div>
 	</nav>
+	<div class="w-full bg-gray-800 fixed">
+		<ul>
+			<li v-for="nav in navItems" :key="nav.name" :class="['mx-2 text-center text-gray-100 font-black', { 'bg-gray-600': nav.active }]">
+				<a :href="nav.link" class="w-full text-center">
+					{{ nav.name }}
+				</a>
+			</li>
+		</ul>
+	</div>
 </template>
