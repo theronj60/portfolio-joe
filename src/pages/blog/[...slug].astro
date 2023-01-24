@@ -38,7 +38,7 @@ const { slug, title, text } = Astro.props;
 ---
 
 <Layout title="blog-list">
-	<section class="px-8 py-8 min-h-screen min-w-screen flex snap-center text-gray-100 pt-24" style={bgImg}>
+	<section class="px-8 py-8 min-h-screen w-full flex snap-center text-gray-100 pt-24" style={bgImg}>
 		<ul class="flex flex-col space-y-4">
 			{posts.map((post) => (
 				<li class="border border-black rounded py-2 px-4">

@@ -11,13 +11,17 @@ let navItems =  ref([
 	{ name: 'Contact', link: '#contact', active: false },
 ])
 
-let mobileNav = false
+let mobileNav = ref(false)
 
 onMounted(() => {
 	nextTick(() => {
 		setNav()
 	})
 })
+
+function toggleNav() {
+	mobileNav.value = !mobileNav.value
+}
 
  async function setNav() {
 	navItems.value.forEach((nav) => {
@@ -39,7 +43,11 @@ onMounted(() => {
 			
 		</div>
 		<div class="flex md:hidden">
-				X
+			<button type="button" @click="toggleNav" class="text-white">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9">
+				  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+				</svg>
+			</button>
 		</div>
 		<div class="md:flex hidden">
 			<ul class="md:flex justify-self-end items-center text-gray-100 hidden">
@@ -51,10 +59,10 @@ onMounted(() => {
 			</ul>
 		</div>
 	</nav>
-	<div class="w-full bg-gray-800 fixed">
+	<div v-if="mobileNav" class="w-full bg-gray-800 fixed top-22">
 		<ul>
-			<li v-for="nav in navItems" :key="nav.name" :class="['mx-2 text-center text-gray-100 font-black', { 'bg-gray-600': nav.active }]">
-				<a :href="nav.link" class="w-full text-center">
+			<li v-for="nav in navItems" :key="nav.name" :class="['flex text-center text-gray-100 font-black', { 'bg-gray-600': nav.active }]">
+				<a :href="nav.link" class="w-full text-center py-4">
 					{{ nav.name }}
 				</a>
 			</li>

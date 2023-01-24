@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Resume from '../components/Resume.vue'
+import Image from '../imgs/monument-day.jpeg';
+const bgImg = `background-image: url(${Image}); background-size: cover;`
 ---
 
 <Layout title="Theron Joe">
-	<section class="flex">
+	<section class="min-h-screen min-w-screen flex w-full snap-center pt-6 pb-6" style={bgImg}>
 		<Resume client:load />
 	</section>
 </Layout>
