@@ -4,7 +4,7 @@
 </script>
 
 <template id="resume">
-	<div class="md:w-[900px] w-full border rounded py-4 px-8 mx-4 md:mx-0 bg-gray-200">
+	<div class="lg:w-[900px] w-full border rounded py-4 px-8 mx-4 lg:mx-0 bg-gray-200">
 		<div class="flex flex-col items-center w-full md:h-24">
 			<h2 class="flex text-3xl text-cyan-600 font-semibold">Theron Joe</h2>
 			<span class="font-semibold">Web Developer</span>
