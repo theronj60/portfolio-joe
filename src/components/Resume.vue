@@ -12,7 +12,7 @@
 				<a href="mailto:theronj@joetwebdev.io" class="hover:font-semibold hover:text-cyan-600">theronj@joetwebdev.io</a>
 				<a href="https://twitter.com/joeT_60" target="_blank" class="hover:font-semibold hover:text-cyan-600">Twitter</a>
 				<a href="https://github.com/theronj60" target="_blank" class="hover:font-semibold hover:text-cyan-600">Github</a>
-				<a href="https://joetwebdev.io/" target="_blank" class="hover:font-semibold hover:text-cyan-600">joetwebdev.io</a>
+				<!-- <a href="https://joetwebdev.io/" target="_blank" class="hover:font-semibold hover:text-cyan-600">joetwebdev.io</a> -->
 			</div>
 		</div>
 		<div class="flex-col md:flex-row flex justify-center md:space-x-4 mt-4">
@@ -86,16 +86,19 @@
 				<div>
 					<p class="font-semibold">Southern Utah University</p>
 					<span class="text-gray-600 font-normal">General Studies || 2010 - 2011</span>
-					<!-- <p>Figma, Affinity Designer, Adobe XD</p> -->
 				</div>
 				<h3 class="text-2xl text-cyan-600 font-semibold">Projects</h3>
 				<div>
-					<a href="https://github.com/theronj60/im-bored" target="_blank" class="font-semibold">im-bored</a>
+					<a href="https://github.com/theronj60/im-bored" target="_blank" class="font-semibold hover:text-cyan-600">im-bored</a>
 					<p>go, tui project, consumed bored api</p>
 				</div>
 				<div>
-					<a href="https://github.com/theronj60/portfolio-joe" target="_blank" class="font-semibold">Portfolio</a>
+					<a href="https://github.com/theronj60/portfolio-joe" target="_blank" class="font-semibold hover:text-cyan-600">Portfolio</a>
 					<p>Built with astroJs and Vue</p>
+				</div>
+				<div>
+					<a href="https://github.com/theronj60" target="_blank" class="font-semibold hover:text-cyan-600">Github</a>
+					<p>My github Profile</p>
 				</div>
 				<h3 class="text-2xl text-cyan-600 font-semibold">Hobbies</h3>
 				<div>
