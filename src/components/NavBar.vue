@@ -7,7 +7,7 @@ let navItems =  ref([
 	{ name: 'About', link: '/about', active: false },
 	{ name: 'Blog', link: '/blog', active: false },
 	{ name: 'Resume', link: '/resume', active: false },
-	{ name: 'Projects', link: '#projects', active: false },
+	{ name: 'Projects', link: '/projects', active: false },
 	{ name: 'Contact', link: '#contact', active: false },
 ])
 
@@ -40,7 +40,6 @@ function toggleNav() {
 			<div class="border rounded-lg">
 				<img id="" :src="Logo" alt="" class="w-12 h-12">
 			</div>
-			
 		</div>
 		<div class="flex md:hidden">
 			<button type="button" @click="toggleNav" class="text-white">
