@@ -7,9 +7,28 @@ import Image from '../imgs/arch-cedar-lg.jpeg';
 const bgImg = `background-image: url(${Image}); background-size: cover;`
 ---
 
+<!-- @TODO need to add mobile styles -->
 <Layout title="Theron Joe">
 	<section class="min-h-screen min-w-screen flex w-full justify-center bg-center md:bg-right text-gray-100 pt-24" style={bgImg}>
-		<div class="grid grid-cols-4 gap-8">
+		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-min gap-8">
+			<div class="flex flex-col space-x-4 bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
+				<div class="p-6 rounded-tl-xl rounded-tr-xl" style="background-color: #57A143;">
+					<a class="cursor-pointer" target="_blank" href="https://github.com/theronj60/dotconfigs">
+						<svg
+							role="img"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<title>Neovim</title>
+							<path
+								d="M2.214 4.954v13.615L7.655 24V10.314L3.312 3.845 2.214 4.954zm4.999 17.98l-4.557-4.548V5.136l.59-.596 3.967 5.908v12.485zm14.573-4.457l-.862.937-4.24-6.376V0l5.068 5.092.034 13.385zM7.431.001l12.998 19.835-3.637 3.637L3.787 3.683 7.43 0z"
+							/>
+						</svg>
+					</a>
+				</div>
+				<h3 class="font-semibold my-2">My config files</h3>
+				<p class="text-sm">My config files for my editor and terminal environment.</p>
+			</div>
 			<div class="flex flex-col space-x-4 bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
 				<div class="p-6 rounded-tl-xl rounded-tr-xl" style="background-color: #3776AB;">
 					<a class="cursor-pointer" target="_blank" href="https://colors.joetwebdev.io/">
@@ -45,18 +64,6 @@ const bgImg = `background-image: url(${Image}); background-size: cover;`
 				</div>
 				<h3 class="font-semibold my-2">im-bored</h3>
 				<p class="text-sm">Terminal app built with Go, start app in terminal, answer prompts and it will return an activity to do for when your bored.</p>
-			</div>
-			<div class="flex flex-col space-x-4 bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
-				<div class="p-6 bg-gray-500 rounded-tl-xl rounded-tr-xl">
-					<svg
-						role="img"
-						viewBox="0 0 24 24"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<title></title>
-						</svg>
-				</div>
-				<p class="py-2">Coming Soon</p>
 			</div>
 			<div class="flex flex-col space-x-4 bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
 				<div class="p-6 bg-gray-500 rounded-tl-xl rounded-tr-xl">
