@@ -5,7 +5,7 @@ import Logo from '../../src/imgs/mnts.png';
 let navItems =  ref([
 	{ name: 'Home', link: '/', active: true },
 	{ name: 'About', link: '/about', active: false },
-	{ name: 'Blog', link: '/blog', active: false },
+	// { name: 'Blog', link: '/blog', active: false },
 	{ name: 'Resume', link: '/resume', active: false },
 	{ name: 'Projects', link: '/projects', active: false },
 	//{ name: 'Contact', link: '#contact', active: false },

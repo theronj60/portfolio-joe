@@ -8,31 +8,31 @@ const posts = (await Astro.glob('./*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
 );
 
-export async function getStaticPaths() {
-  const pages = [
-    {
-      slug: undefined,
-      title: "Astro Store",
-      text: "Welcome to the Astro store!",
-    },
-    {
-      slug: "blog/intro",
-      title: "Astro products",
-      text: "We have lots of products for you",
-    },
-    {
-      slug: "blog/why-neovim",
-      title: "The ultimative Astro handbook",
-      text: "If you want to learn Astro, you must read this book.",
-    },
-  ];
-  return pages.map(({ slug, title, text }) => {
-    return {
-      params: { slug },
-      props: { title, text },
-    };
-  });
-}
+// export async function getStaticPaths() {
+//  const pages = [
+//    {
+//      slug: undefined,
+//      title: "Astro Store",
+//      text: "Welcome to the Astro store!",
+//    },
+//    {
+//      slug: "blog/intro",
+//      title: "Astro products",
+//      text: "We have lots of products for you",
+//    },
+//    {
+//      slug: "blog/why-neovim",
+//      title: "The ultimative Astro handbook",
+//      text: "If you want to learn Astro, you must read this book.",
+//    },
+//  ];
+//  return pages.map(({ slug, title, text }) => {
+//    return {
+//      params: { slug },
+//      props: { title, text },
+//    };
+//  });
+// }
 
 ---
 
