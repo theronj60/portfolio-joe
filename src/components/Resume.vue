@@ -25,7 +25,7 @@
 						<li>Experience with Hubspot API and Stripe</li>
 						<li>Manage DNS and provide maintenance for several websites, ensuring optimal performance and uptime.</li>
 						<li>Update and maintain project code through Laravel framework.</li>
-						<li>Manage servers and databases through DigitalOcean and Laravel Forge, ensur- ing reliable and efficient server performance.</li>
+						<li>Manage servers and databases through DigitalOcean and Laravel Forge, ensuring reliable and efficient server performance.</li>
 					</ul>
 				</div>
 				<div>
@@ -80,6 +80,10 @@
 				<div>
 					<p class="font-semibold">Tools & Platforms</p>
 					<p>Git, Vite, Webpack, Docker, Stripe, Hubspot</p>
+				</div>
+				<div>
+					<p class="font-semibold">Task Management</p>
+					<p>Asana, Trello, Jira</p>
 				</div>
 				<div>
 					<p class="font-semibold">Design</p>
