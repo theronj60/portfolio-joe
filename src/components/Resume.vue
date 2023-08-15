@@ -7,7 +7,7 @@
 	<div class="lg:w-[900px] w-full border rounded py-4 px-8 mx-4 lg:mx-0 bg-gray-200">
 		<div class="flex flex-col items-center w-full md:h-24">
 			<h2 class="flex text-3xl text-cyan-600 font-semibold">Theron Joe</h2>
-			<span class="font-semibold">Web Developer</span>
+			<span class="font-semibold">Full Stack Developer</span>
 			<div class="flex flex-col md:flex-row w-full md:space-x-8 justify-center items-center h-24">
 				<a href="mailto:theronj@joetwebdev.io" class="hover:font-semibold hover:text-cyan-600">theronj@joetwebdev.io</a>
 				<a href="https://twitter.com/joeT_60" target="_blank" class="hover:font-semibold hover:text-cyan-600">Twitter</a>
@@ -18,6 +18,16 @@
 		<div class="flex-col md:flex-row flex justify-center md:space-x-4 mt-4">
 			<div class="flex flex-col md:w-2/3 space-y-4 text-gray-900">
 				<h3 class="text-2xl text-cyan-600 font-semibold -mb-2">Revelant Experience</h3>
+				<div>
+					<h4 class="text-base text-gray-600"><span class="text-gray-900 font-semibold">Full Stack Developer</span> at Pro Market Consulting LLC</h4>
+					<span class="text-sm">March 2023 - Current <span class="text-base">||</span> St George, Utah</span>
+					<ul class="list-inside list-disc">
+						<li>Experience with Hubspot API and Stripe</li>
+						<li>Manage DNS and provide maintenance for several websites, ensuring optimal performance and uptime.</li>
+						<li>Update and maintain project code through Laravel framework.</li>
+						<li>Manage servers and databases through DigitalOcean and Laravel Forge, ensur- ing reliable and efficient server performance.</li>
+					</ul>
+				</div>
 				<div>
 					<h4 class="text-base text-gray-600"><span class="text-gray-900 font-semibold">Web Developer</span> at Holbrook Asphalt</h4>
 					<span class="text-sm">Nov 2020 - Dec 2022 <span class="text-base">||</span> St George, Utah</span>
@@ -69,7 +79,7 @@
 				</div>
 				<div>
 					<p class="font-semibold">Tools & Platforms</p>
-					<p>Git, Vite, Webpack, Docker</p>
+					<p>Git, Vite, Webpack, Docker, Stripe, Hubspot</p>
 				</div>
 				<div>
 					<p class="font-semibold">Design</p>

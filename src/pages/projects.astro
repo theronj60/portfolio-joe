@@ -9,9 +9,10 @@ const bgImg = `background-image: url(${Image}); background-size: cover;`
 
 <!-- @TODO need to add mobile styles -->
 <Layout title="Theron Joe">
-	<section class="min-h-screen min-w-screen flex w-full justify-center bg-center md:bg-right text-gray-100 pt-24" style={bgImg}>
+	<section class="min-h-screen min-w-screen space-y-8 flex flex-col items-center w-full justify-center bg-center md:bg-right text-gray-100 pt-12 pb-16" style={bgImg}>
+		<h1 class="bg-gray-700 rounded-xl py-2 px-6 text-2xl">Side Projects/Editor</h1>
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-min gap-8">
-			<div class="flex flex-col space-x-4 bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
+			<div class="flex flex-col bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
 				<div class="p-6 rounded-tl-xl rounded-tr-xl" style="background-color: #57A143;">
 					<a class="cursor-pointer" target="_blank" href="https://github.com/theronj60/dotconfigs">
 						<svg
@@ -26,10 +27,10 @@ const bgImg = `background-image: url(${Image}); background-size: cover;`
 						</svg>
 					</a>
 				</div>
-				<h3 class="font-semibold my-2">My config files</h3>
-				<p class="text-sm">My config files for my editor and terminal environment.</p>
+				<h3 class="font-semibold my-2 mx-4">My config files</h3>
+				<p class="text-sm mx-4">My config files for my editor and terminal environment.</p>
 			</div>
-			<div class="flex flex-col space-x-4 bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
+			<div class="flex flex-col bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
 				<div class="p-6 rounded-tl-xl rounded-tr-xl" style="background-color: #3776AB;">
 					<a class="cursor-pointer" target="_blank" href="https://colors.joetwebdev.io/">
 						<svg
@@ -44,10 +45,10 @@ const bgImg = `background-image: url(${Image}); background-size: cover;`
 						</svg>
 					</a>
 				</div>
-				<h3 class="font-semibold my-2">Color Extractor</h3>
-				<p class="text-sm">Website built with Python/Flask, upload an image and the web app will return colors it finds in the image.</p>
+				<h3 class="font-semibold my-2 mx-4">Color Extractor</h3>
+				<p class="text-sm mx-4">Website built with Python/Flask, upload an image and the web app will return colors it finds in the image.</p>
 			</div>
-			<div class="flex flex-col space-x-4 bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
+			<div class="flex flex-col bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
 				<div class="p-6 rounded-tl-xl rounded-tr-xl" style="background-color: #00ADD8;">
 					<a class="cursor-pointer" target="_blank" href="https://github.com/theronj60/im-bored">
 						<svg
@@ -62,21 +63,91 @@ const bgImg = `background-image: url(${Image}); background-size: cover;`
 						</svg>
 					</a>
 				</div>
-				<h3 class="font-semibold my-2">im-bored</h3>
-				<p class="text-sm">Terminal app built with Go, start app in terminal, answer prompts and it will return an activity to do for when your bored.</p>
+				<h3 class="font-semibold my-2 mx-4">im-bored</h3>
+				<p class="text-sm mx-4">Terminal app built with Go, start app in terminal, answer prompts and it will return an activity to do for when your bored.</p>
 			</div>
-			<div class="flex flex-col space-x-4 bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
+			<div class="flex flex-col bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
 				<div class="p-6 bg-gray-500 rounded-tl-xl rounded-tr-xl">
-					<svg
-						role="img"
-						viewBox="0 0 24 24"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<title></title>
+					<a class="cursor-pointer" target="_blank" href="https://cheiisfrybread.com">
+
+						<svg
+							role="img"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<title>Cheii's Frybread</title>
 						</svg>
+					</a>
 				</div>
-				<p class="py-2">Coming Soon</p>
+				<h3 class="font-semibold my-2 mx-4">Cheii's Frybread</h3>
+				<p class="text-sm mx-4">A side hustle I started. A food stand where we make navajo tacos. I built a site to host info and a basic menu. Built with astro.build</p>
 			</div>
 		</div>
+		<!-- Professional sites -->
+		<h1 class="bg-gray-700 rounded-xl py-2 px-6 text-2xl">Professional Projects</h1>
+		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-min gap-8">
+			<div class="flex flex-col bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
+				<div class="p-6 rounded-tl-xl rounded-tr-xl bg-blue-400">
+					<a class="cursor-pointer" target="_blank" href="https://leadwebworks.com">
+						<svg
+							role="img"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<title>LeadWebWorks</title>
+						</svg>
+					</a>
+				</div>
+				<h3 class="font-semibold my-2 mx-4">LeadWebWorks</h3>
+				<p class="text-sm mx-4">Static marketing site that helps users generate income through commission and driving traffic. Built with astro.build.</p>
+			</div>
+			<div class="flex flex-col bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
+				<div class="p-6 rounded-tl-xl rounded-tr-xl bg-blue-800">
+					<a class="cursor-pointer" target="_blank" href="https://support.copilot.org">
+						<svg
+							role="img"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<title>Copilot for Teens</title>
+						</svg>
+					</a>
+				</div>
+				<h3 class="font-semibold my-2 mx-4">Copilot for Teens</h3>
+				<p class="text-sm mx-4">A web app that helps users find help and sign up for a mental health service. Built with TALL stack.</p>
+			</div>
+			<div class="flex flex-col bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
+				<div class="p-6 rounded-tl-xl rounded-tr-xl bg-orange-500">
+					<a class="cursor-pointer" target="_blank" href="https://easyshop.businesseducationspecialists.com/">
+						<svg
+							role="img"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<title>EasyShop</title>
+						</svg>
+					</a>
+				</div>
+				<h3 class="font-semibold my-2 mx-4">EasyShop</h3>
+				<p class="text-sm mx-4">Web app that signs up users for a wordpress blog site that they will manage. Built with Laravel, Bootstrap and Tailwind.</p>
+			</div>
+			<div class="flex flex-col bg-gray-800 border rounded-xl shadow-xl h-96 w-60">
+				<div class="p-6 bg-gray-500 rounded-tl-xl rounded-tr-xl">
+					<a class="cursor-pointer" target="_blank" href="#">
+
+						<svg
+							role="img"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<title>More coming soon...</title>
+						</svg>
+					</a>
+				</div>
+				<h3 class="font-semibold my-2 mx-4"></h3>
+				<p class="text-sm mx-4">More coming soon...</p>
+			</div>
+		</div>
+
 	</section>
 </Layout>
