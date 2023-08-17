@@ -6,17 +6,43 @@ export interface Props {
 const { title } = Astro.props;
 
 import NavBar from '../components/NavBar.vue';
-//import '@astrojs/tailwind'
+import AppleTouch from '../imgs/apple-touch-icon.png'
+import FavMed from '../imgs/favicon-32x32.png'
+import FavSm from '../imgs/favicon-16x16.png'
+import Manifest from '../imgs/site.webmanifest'
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Title Tag -->
 		<title>{title} | Full Stack Developer</title>
+		<!-- Meta Description -->
+		<meta name="description" content="Experienced TALL stack Developer proficient in Laravel, continuously expanding into Go & Python. Committed to innovation and effective problem-solving.">
+		<!-- Keywords for SEO (if needed) -->
+		<meta name="keywords" content="developer, web developer, software developer, software engineer, fullstack, fullstack developer, fullstack engineer, laravel, php, javascript">
+		<!-- Canonical URL (if needed) -->
+		<link rel="canonical" href="https://www.joetwebdev.io/">
+		<!-- Social Media Tags (Open Graph for Facebook) -->
+		<meta property="og:title" content="Theron Joe | Full Stack Developer">
+		<meta property="og:description" content="Experienced TALL stack Developer proficient in Laravel, continuously expanding into Go & Python. Committed to innovation and effective problem-solving.">
+		<meta property="og:image" content={ FavSm }>
+		<meta property="og:url" content="https://www.joetwebdev.io/">
+		<meta property="og:type" content="website">
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="full_stack_developer">
+		<meta name="twitter:title" content="Theron Joe | Full Stack Developer">
+		<meta name="twitter:description" content="Experienced TALL stack Developer proficient in Laravel, continuously expanding into Go & Python. Committed to innovation and effective problem-solving.">
+		<meta name="twitter:image" content={ FavMed }>
+		<link rel="apple-touch-icon" sizes="180x180" href={ AppleTouch }>
+		<link rel="icon" type="image/png" sizes="32x32" href={ FavMed }>
+		<link rel="icon" type="image/png" sizes="16x16" href={ FavSm }>
+		<link rel="manifest" href={ Manifest }>
+		<meta name="generator" content={Astro.generator} />
+
 		<script>
 			!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
 			posthog.init('phc_chTwsIEDVm37f7LfZW07qDmQnwqiA6XqNDDhdGc41aE',{api_host:'https://app.posthog.com'})
