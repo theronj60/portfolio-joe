@@ -8,7 +8,7 @@ let question = ref()
 function onSubmit() {
 	// need to fix
 	axios
-		.post('http://api.digitalhogan.com/api/financial-assistant', { question: question.value }, {
+		.post('https://api.digitalhogan.com/api/financial-assistant', { question: question.value }, {
 			headers: {
 				'Content-Type': 'multipart/form-data'
 			}
