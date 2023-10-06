@@ -10,10 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-	"@astrojs/tailwind": "^3.0.0-beta.1",
+    "@astrojs/tailwind": "^3.0.0-beta.1",
     "@astrojs/vue": "^1.0.1",
     "@nanostores/persistent": "^0.7.0",
     "@nanostores/vue": "^0.6.1",
+    "axios": "^1.5.1",
     "nanostores": "^0.7.1",
     "vue": "^3.2.39"
   },

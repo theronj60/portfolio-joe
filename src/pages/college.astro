@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Chat from '../components/chat.vue';
+---
+
+<Layout title="College Chat">
+	<section class="min-h-screen min-w-screen flex w-full justify-center items-center bg-center md:bg-right bg-gray-700">
+		<div
+				class="sm:w-[600px] w-full mx-4 mt-6 px-6 py-4 bg-white shadow-md overflow-hidden rounded-lg"
+		>
+			<Chat client:load />
+		</div>
+	</section>
+</Layout>
