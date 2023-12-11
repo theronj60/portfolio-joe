@@ -1,22 +1,34 @@
 <script setup lang="ts">
-import axios from 'axios'
 import { computed, reactive, ref } from 'vue';
 
-let responseT = <Object>reactive({message: null})
+let responseT = <Object>reactive({ message: null })
 let question = ref()
 
-function onSubmit() {
-	// need to fix
-	axios
-		.post('https://api.digitalhogan.com/api/financial-assistant', { question: question.value }, {
-			headers: {
-				'Content-Type': 'multipart/form-data'
+async function onSubmit() {
+	// gpt response
+	const formData = new FormData();
+	formData.append('question', question.value);
+
+	await fetch('http://127.0.0.1:8885/api/financial-assistant', {
+		method: 'POST',
+		// headers: {
+		// 	'Content-Type': 'application/x-www-form-urlencoded'
+		// },
+		body: formData
+		// { question: question.value }
+	})
+		.then(response => {
+			if (!response.ok) {
+				throw new Error('Network response was not ok');
 			}
-		}
-		)
-		.then(response => (
-			responseT.message = response.data.message
-		))
+			return response.json(); // Parsing the JSON response
+		})
+		.then(data => {
+			responseT.message = data.message;
+		})
+		.catch(error => {
+			console.error('There was a problem with your fetch operation:', error);
+		});
 }
 
 const responseMessage = computed(() => {
